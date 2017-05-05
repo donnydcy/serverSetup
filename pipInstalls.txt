@@ -4,7 +4,6 @@ scipy
 pandas
 pillow
 matplotlib
-pyqt
 ipython
 jupyter
 keras
