@@ -1,0 +1,15 @@
+virtualenv
+numpy
+scipy
+pandas
+pillow
+matplotlib
+pyqt
+ipython
+jupyter
+keras
+tensorflow-gpu
+theano
+h5py
+protobuf
+future
