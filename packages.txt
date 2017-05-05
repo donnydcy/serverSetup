@@ -2,3 +2,13 @@ openssh-client
 openssh-server
 screen
 build-essential
+tmux
+scons
+git-core
+git-gui
+gitk
+python3
+python
+pip
+pip3
+libboost-all-dev
