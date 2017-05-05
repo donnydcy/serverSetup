@@ -9,6 +9,5 @@ git-gui
 gitk
 python3
 python
-pip
-pip3
-libboost-all-dev
+python-pip
+python3-pip
