@@ -106,53 +106,40 @@ $ sudo cp include/* /usr/local/cuda/include/
 ```
 
 # <span class="c10 c5">Install Tensorflow under Anaconda environment</span>
+
+**_If you are going to install Tensorflow systemwisely, just stop here_**
+** Our pipInstalls.txt installs its automatically and systemwisely, you will run it later**
+** The following instruction is for installing in virtual enviornment **
+
 The easiest way is to install with pip:
 ```bash
 $ pip install tensorflow-gpu
 ```
 <span class="c37">[https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#anaconda-installation](https://www.google.com/url?q=https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md%23anaconda-installation&sa=D&ust=1494276309551000&usg=AFQjCNEohgTpaM2TbYMz6R9A7nXKbpKuHg)</span>
 
-<span class="c2 c5">In Tensorflow-1.0 folder, there are different versions, in case its website crashing.</span>
 
-<span class="c2 c5">Google how to install .whl file using wheel.</span>
+1.  <span class="c35 c5 c42">Create an environment called tf for python and tensorflow.</span>
 
-<span class="c2 c5"></span>
-
-1.  <span class="c35 c5 c42">Create an environment called tf34 for python3.4 and tensorflow.</span>
-
-<span class="c1">you can define the environment name (tf34) to anything you like.</span>
+<span class="c1">you can define the environment name (tf) to anything you like.</span>
 
 <span class="c5 c39">Note that there are newer versions of Tensorflow which support Python3.5, 3.6, so the version of python is not necessary to be 3.4</span>
 
-<span class="c2 c0">$ conda create -n tf34 python=3.4 anaconda</span>
+<span class="c2 c0">$ conda create -n tf python=3.5 anaconda</span>
 
-<span class="c2 c0"></span>
-
-<span class="c2 c0"></span>
 
 1.  <span class="c42 c35 c5">Activate the conda environment by issuing the following command:</span>
+```bash
+source activate tensorflow
 
-<span class="c35 c18">        </span><span class="c0 c7">$</span> <span class="c7 c18 c45">source activate tensorflow</span><span class="c0 c7">
-</span><span class="c7 c18 c22">         </span><span class="c38 c0 c7">(tf34)$  # Your prompt should change</span>
+(tf)$  # Your prompt should change
+```
 
-<span class="c42 c35 c5"></span>
 
-1.  <span class="c19"> Save source url</span>
-
-<span class="c17">(There is no link for gpu version in the official website, use the one which is provided in github):</span>
-
-<span class="c0">(</span><span class="c0">tf34</span><span class="c0">)$</span> <span class="c0">export</span><span class="c0"> TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.0.0-cp34-cp34m-linux_x86_64.whl</span><span class="c0 c42 c43 c24">
-</span>
-
-<span class="c42 c20 c23 c43"></span>
 
 1.  <span class="c19"> Installation is straightforward:</span>
-
-<span class="c0 c35">        </span><span class="c2 c0">(tf34)$ pip install --ignore-installed --upgrade $TF_BINARY_URL</span>
-
-<span class="c2 c0"></span>
-
-<span class="c0">        </span><span class="c5 c30">Test:</span>
+```bash
+(tf)$ pip install tensorflow-gpu
+```
 
 <span class="c0 c24">        (tf34)</span><span class="c0 c24">$</span> <span class="c0 c42 c24 c47">python</span>
 
