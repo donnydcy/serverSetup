@@ -1,8 +1,8 @@
 # serverSetup
 add more system packages to packages.txt, python packages to pipInstalls.txt
 ```bash
-$ sudo apt-get install `cat packages.txt`
-$ sudo pip install -r pipInstalls.txt
+$ sudo apt-get install `cat 1_packages.txt`
+$ sudo pip install -r 3_pipInstalls.txt
 ```
 ## CUDA and Tensorflow installation Doc:
 [Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/InstallingCUDA8Tensorflow1_0inUbuntu16_04.md)
