@@ -17,9 +17,9 @@
 <span class="c2 c5"></span>
 
 1.  <span class="c2 c5">Disable the default  nouveau driver:</span>
-'''bash
+```bash
 $ sudo vim /etc/modprobe.d/blacklist-nouveau.conf
-'''
+```
 
 <span class="c2 c5 c18"></span>
 
@@ -39,11 +39,11 @@ $ sudo vim /etc/modprobe.d/blacklist-nouveau.conf
 
 <span class="c2 c5">Save this file, exit your editor, and then update the initial RAM filesystem, followed by rebooting your machine:</span>
 
-'''bash
+```bash
 $ echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
 $ sudo update-initramfs -u
 $ sudo reboot
-'''
+```
 
 
 1.  <span class="c2 c5"> After rebooting, it may not be able to have a graphical desktop (gnome),  use Ctrl+Alt+F1 to switch into console mode and stop the x service:</span>
@@ -51,17 +51,17 @@ $ sudo reboot
 <span>        </span><span class="c20 c25">$ sudo service lightdm stop</span><span class="c2 c20">  or</span>
 
 <span class="c20">        </span><span class="c20 c25">$ sudo service gdm stop        </span><span class="c20">or</span>
-'''bash
+```bash
 $ sudo service kdm stop
-'''
+```
 
 
 # <span class="c10 c5">Install CUDA</span>
-'''bash
+```bash
 $ chmod +x cuda_8*.run
 $ mkdir installers
 $ sudo ./cuda_8*_linux.run -extract=`pwd`/installers
-'''
+```
 Note the \` is the key left to “1”
 
 <span class="c34"></span>
