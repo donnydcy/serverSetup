@@ -66,8 +66,10 @@ Note the \` is the key left to “1”
 
 1.  <span>Change directory to  installers:</span> <span class="c6">$cd installers</span>
 2.  <span class="c2 c5"> Run following files in order:</span>
+
+Select **install KMDS** while installing Nvidia-Linux-x86_64*.run driver
 ```bash
-$ sudo ./NVIDIA-Linux-x86_64*.run
+$ sudo ./NVIDIA-Linux-x86_64*.run --no-opengl-files
 $ modprobe nvidia
 $ sudo ./cuda-linux64-rel-8*.run
 $ sudo ./cuda-samples-linux-8*..run
