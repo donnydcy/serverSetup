@@ -21,21 +21,15 @@
 $ sudo vim /etc/modprobe.d/blacklist-nouveau.conf
 ```
 
-<span class="c2 c5 c18"></span>
 
-<span class="c2 c5">Add the following lines into the new file:</span>
-
-<span class="c2 c0">blacklist nouveau</span>
-
-<span class="c2 c0">blacklist lbm-nouveau</span>
-
-<span class="c2 c0">options nouveau modeset=0</span>
-
-<span class="c2 c0">alias nouveau off</span>
-
-<span class="c2 c0">alias lbm-nouveau off</span>
-
-<span class="c2 c6"></span>
+Add the following lines into the new file:
+```sh
+blacklist nouveau
+blacklist lbm-nouveau
+options nouveau modeset=0
+alias nouveau off
+alias lbm-nouveau off
+```
 
 <span class="c2 c5">Save this file, exit your editor, and then update the initial RAM filesystem, followed by rebooting your machine:</span>
 
@@ -47,10 +41,14 @@ $ sudo reboot
 
 
 1.  <span class="c2 c5"> After rebooting, it may not be able to have a graphical desktop (gnome),  use Ctrl+Alt+F1 to switch into console mode and stop the x service:</span>
-
-<span>        </span><span class="c20 c25">$ sudo service lightdm stop</span><span class="c2 c20">  or</span>
-
-<span class="c20">        </span><span class="c20 c25">$ sudo service gdm stop        </span><span class="c20">or</span>
+```bash
+$ sudo service lightdm stop
+```
+or
+```bash
+$ sudo service gdm stop
+```
+or
 ```bash
 $ sudo service kdm stop
 ```
@@ -68,69 +66,50 @@ Note the \` is the key left to “1”
 
 1.  <span>Change directory to  installers:</span> <span class="c6">$cd installers</span>
 2.  <span class="c2 c5"> Run following files in order:</span>
+```bash
+$ sudo ./NVIDIA-Linux-x86_64*.run
+$ modprobe nvidia
+$ sudo ./cuda-linux64-rel-8*.run
+$ sudo ./cuda-samples-linux-8*..run
+```
 
-<span class="c0 c2">$ sudo ./NVIDIA-Linux-x86_64*.run</span>
-
-<span class="c2 c0">$ modprobe nvidia</span>
-
-<span class="c2 c0">$ sudo ./cuda-linux64-rel-8*.run</span>
-
-<span class="c0">$ sudo ./cuda-samples-linux-8*..run</span>
-
-<span class="c2 c5"></span>
 
 1.  <span>Add following lines in ~/.bashrc,</span><span class="c41"> if share for all users, add to /etc/bash.bashrc</span>
 
 <span class="c2 c0"># CUDA Toolkit</span>
-
-<span class="c2 c0">export CUDA_HOME=/usr/local/cuda-8</span>
-
-<span class="c2 c0">export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH</span>
-
-<span class="c2 c0">export LD_LIBRARY_PATH=${CUDA_HOME}/extras/CUPTI/lib64:$LD_LIBRARY_PATH</span>
-
-<span class="c0">export PATH=${CUDA_HOME}/bin:${PATH}</span>
-
+```sh
+export CUDA_HOME=/usr/local/cuda-8
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=${CUDA_HOME}/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+export PATH=${CUDA_HOME}/bin:${PATH}
+```
 <span class="c2 c5"> </span>
 
 1.  <span class="c2 c5"> Update ~/.bashrc</span>
-
-<span class="c0">$ source ~/.bashrc</span>
-
+```bash
+$ source ~/.bashrc
+```
 <a id="t.98d504f52e082efa9fe04b41853ac9ee1080f659"></a><a id="t.0"></a>
 
-| 
 
-<span class="c28"></span>
 
- |
-| 
-
-<span class="c28"></span>
-
- |
 
 # <span>Install cuDNN(</span><span class="c48">Cudnn-8.0-linux-x64-v5.1.tgz</span><span>)</span>
 
 <span>Installing cuDNN is quite simple — all we need to do is copying the files in the</span> <span class="c14">lib64</span><span class="c14"> </span><span> and</span> <span class="c14">include</span><span class="c14"> </span><span class="c2 c5"> directories to their appropriate locations on the machine:</span>
-
-<span class="c2 c0">$ cd <cudnn path>
-        $ tar -zxf cudnn-7.5-linux-x64-v5.0-ga.tgz</span>
-
-<span class="c2 c0">$ cd cuda</span>
-
-<span class="c2 c0">$ sudo cp lib64/* /usr/local/cuda/lib64/</span>
-
-<span class="c0">$ sudo cp include/* /usr/local/cuda/include/</span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5"></span>
+```bash
+$ cd <cudnn path>
+$ tar -zxf cudnn-7.5-linux-x64-v5.0-ga.tgz
+$ cd cuda
+$ sudo cp lib64/* /usr/local/cuda/lib64/
+$ sudo cp include/* /usr/local/cuda/include/
+```
 
 # <span class="c10 c5">Install Tensorflow under Anaconda environment</span>
-
+The easiest way is to install with pip:
+```bash
+$ pip install tensorflow-gpu
+```
 <span class="c37">[https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md#anaconda-installation](https://www.google.com/url?q=https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md%23anaconda-installation&sa=D&ust=1494276309551000&usg=AFQjCNEohgTpaM2TbYMz6R9A7nXKbpKuHg)</span>
 
 <span class="c2 c5">In Tensorflow-1.0 folder, there are different versions, in case its website crashing.</span>
