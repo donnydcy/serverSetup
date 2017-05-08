@@ -9,7 +9,7 @@ $ sudo apt-get install `cat 1_packages.txt`
 ```
 2. Install CUDA and cuDnn.
 
-... [Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/InstallingCUDA8Tensorflow1_0inUbuntu16_04.md)
+... [Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/2_InstallingCUDA8onUbuntu16_04.md)
 
 3. Install python packages systemwisely.
 
