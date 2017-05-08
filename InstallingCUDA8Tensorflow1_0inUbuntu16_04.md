@@ -17,8 +17,9 @@
 <span class="c2 c5"></span>
 
 1.  <span class="c2 c5">Disable the default  nouveau driver:</span>
-
-<span class="c20">        </span><span class="c2 c0">$ sudo vim /etc/modprobe.d/blacklist-nouveau.conf</span>
+'''bash
+$ sudo vim /etc/modprobe.d/blacklist-nouveau.conf
+'''
 
 <span class="c2 c5 c18"></span>
 
@@ -38,37 +39,30 @@
 
 <span class="c2 c5">Save this file, exit your editor, and then update the initial RAM filesystem, followed by rebooting your machine:</span>
 
-<span class="c2 c0">$ echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf</span>
+'''bash
+$ echo options nouveau modeset=0 | sudo tee -a /etc/modprobe.d/nouveau-kms.conf
+$ sudo update-initramfs -u
+$ sudo reboot
+'''
 
-<span class="c2 c0"></span>
-
-<span class="c2 c0">$ sudo update-initramfs -u</span>
-
-<span class="c2 c0">$ sudo reboot</span>
-
-<span class="c2 c5"></span>
 
 1.  <span class="c2 c5"> After rebooting, it may not be able to have a graphical desktop (gnome),  use Ctrl+Alt+F1 to switch into console mode and stop the x service:</span>
 
 <span>        </span><span class="c20 c25">$ sudo service lightdm stop</span><span class="c2 c20">  or</span>
 
 <span class="c20">        </span><span class="c20 c25">$ sudo service gdm stop        </span><span class="c20">or</span>
+'''bash
+$ sudo service kdm stop
+'''
 
-<span class="c20 c25 c38">$ sudo service kdm stop</span>
-
-<span class="c2 c20"></span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5"></span>
 
 # <span class="c10 c5">Install CUDA</span>
-
-1.  <span class="c0">$ chmod +x cuda_8*.run</span>
-2.  <span class="c2 c0">$ mkdir installers</span>
-3.  <span class="c0">$ sudo</span> <span class="c0">./cuda_8*_linux.run</span><span class="c0"> -extract=`pwd`/installers</span><span class="c6"> </span><span class="c2 c5"> </span>
-
-<span class="c2 c5">Note the ` is the key left to “1”</span>
+'''bash
+$ chmod +x cuda_8*.run
+$ mkdir installers
+$ sudo ./cuda_8*_linux.run -extract=`pwd`/installers
+'''
+Note the \` is the key left to “1”
 
 <span class="c34"></span>
 
@@ -199,24 +193,3 @@
 
 <span class="c0 c35">        (tf34)$ source deactivate</span>
 
-<span class="c0">        </span>
-
-<span class="c42 c20 c23 c43"></span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5">         </span>
-
-<span> </span>
-
-<span class="c2 c6"></span>
-
-<span class="c2 c6"></span>
-
-<span class="c2 c6"></span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5"></span>
-
-<span class="c2 c5"></span>
