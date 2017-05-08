@@ -1,6 +1,7 @@
 # serverSetup
 add more system packages to packages.txt, python packages to pipInstalls.txt
 1. Install build essentials. 
+
 ...Including: python, python3, pip, pip3, git,...
 
 ```bash
@@ -8,7 +9,7 @@ $ sudo apt-get install `cat 1_packages.txt`
 ```
 2. Install CUDA and cuDnn.
 
-...[Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/InstallingCUDA8Tensorflow1_0inUbuntu16_04.md)
+... [Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/InstallingCUDA8Tensorflow1_0inUbuntu16_04.md)
 
 3. Install python packages systemwisely.
 
