@@ -8,6 +8,7 @@ add more system packages to packages.txt, python packages to pipInstalls.txt
 $ sudo apt-get install `cat 1_packages.txt`
 ```
 2. Install CUDA and cuDnn.
+Strictly follow this instruction to avoid *infinit login loop*.
 
 ... [Install CUDA and Tensorflow](https://github.com/donnydcy/serverSetup/blob/master/2_InstallingCUDA8onUbuntu16_04.md)
 
