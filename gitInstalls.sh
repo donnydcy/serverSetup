@@ -10,4 +10,7 @@ cd singularity-$VERSION
 ./configure --prefix=/usr/local
 make
 sudo make install
-
+#
+# Install vim Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#
