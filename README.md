@@ -26,4 +26,4 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 ```
 
 
-*I've install or recover 3 GPU servers by using this method.*
+*I've installed or recovered 3 GPU servers by using this method.*
