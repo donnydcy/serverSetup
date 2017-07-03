@@ -68,6 +68,7 @@ Note the \` is the key left to “1”
 2.  <span class="c2 c5"> Run following files in order:</span>
 
 Select **install KMDS** while installing Nvidia-Linux-x86_64*.run driver
+**Note that the --no-opengl-files flag is Very Very Very important!**
 ```bash
 $ sudo ./NVIDIA-Linux-x86_64*.run --no-opengl-files
 $ modprobe nvidia
