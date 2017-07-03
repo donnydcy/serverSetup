@@ -24,3 +24,6 @@ $ sudo pip install -r 3_pipInstalls.txt
 ```sh
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 ```
+
+
+*I've install or recover 3 GPU servers by using this method.*
