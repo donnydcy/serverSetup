@@ -2,6 +2,8 @@
 
 <span class="c2 c5">cuda_8.0.61_375.26_linux.run</span>
 
+**For linux kernel > 4.10: **<span class="c2 c5">NVIDIA-Linux-x86_64-390.59.run</span>
+
 <span class="c2 c5">cudnn-8.0-linux-x64-v5.1.tgz</span>
 
 <span class="c2 c5"></span>
@@ -66,8 +68,12 @@ Note the \` is the key left to “1”
 
 1.  <span>Change directory to  installers:</span> <span class="c6">$cd installers</span>
 2.  <span class="c2 c5"> Run following files in order:</span>
+<span class="c34"></span>
+
 **In Linux Kernel > 4.10, there is a bug in the defualt NVIDIA-Linux-x86_64-375.26.run driver.**
 **Download NVIDIA-Linux-x86_64-390.59.run, and delete the original 375.26**
+<span class="c34"></span>
+
 Select **install KMDS** while installing Nvidia-Linux-x86_64*.run driver
 **Note that the --no-opengl-files flag is Very Very Very important!**
 ```bash
